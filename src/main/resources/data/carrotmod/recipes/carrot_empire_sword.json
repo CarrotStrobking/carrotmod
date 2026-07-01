@@ -1,9 +1,9 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "A B",
-    "BA B",
-    " B C"
+    "AB",
+    "BAB",
+    " BC"
   ],
   "key": {
     "A": {
@@ -17,7 +17,7 @@
     }
   },
   "result": {
-    "item": "carrotmod:carrot_empire_sword",
+    "id": "carrotmod:carrot_empire_sword",
     "count": 1
   }
 }
