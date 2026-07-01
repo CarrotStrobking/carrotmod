@@ -2,5 +2,6 @@
   "item.carrotmod.carrot_empire_sword": "Carrot Empire Sword",
   "message.carrotmod.holy_power_recovering": "Holy Power is recovering...",
   "message.carrotmod.holy_power_restored": "The Carrot Empire Sword has regained its Holy Power!",
-  "message.carrotmod.holy_power_depleted": "The Carrot Empire Sword has exhausted its Holy Power..."
+  "message.carrotmod.holy_power_depleted": "The Carrot Empire Sword has exhausted its Holy Power...",
+  "message.carrotmod.holy_power_bar": "Holy Power %1$s §7(%2$s/%3$s)"
 }

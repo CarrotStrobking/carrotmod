@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "A": "minecraft:golden_carrot",
+    "B": "minecraft:gold_nugget",
+    "C": "#minecraft:iron_tool_materials"
+  },
+  "pattern": [
+    "AB ",
+    "BAB",
+    " BC"
+  ],
+  "result": {
+    "count": 1,
+    "id": "carrotmod:carrot_empire_sword"
+  }
+}

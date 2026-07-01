@@ -2,5 +2,6 @@
   "item.carrotmod.carrot_empire_sword": "胡萝北圣剑",
   "message.carrotmod.holy_power_recovering": "神圣之力正在恢复……",
   "message.carrotmod.holy_power_restored": "胡萝卜圣剑重新充满了神圣之力！",
-  "message.carrotmod.holy_power_depleted": "胡萝卜圣剑的神圣之力已经耗尽……"
+  "message.carrotmod.holy_power_depleted": "胡萝卜圣剑的神圣之力已经耗尽……",
+  "message.carrotmod.holy_power_bar": "圣光充能 %1$s §7(%2$s/%3$s)"
 }
