@@ -1,4 +1,5 @@
 package com.carrot.carrotmod;
+import com.carrot.carrotmod.event.HealingEvents;
 import com.carrot.carrotmod.item.ModItems;
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.resources.ResourceLocation;
@@ -13,6 +14,8 @@ public class CarrotMod implements ModInitializer {
 	public void onInitialize() {
 
 		ModItems.registerMODItems();
+
+		HealingEvents.register();
 	}
 
 	public static ResourceLocation id(String path) {

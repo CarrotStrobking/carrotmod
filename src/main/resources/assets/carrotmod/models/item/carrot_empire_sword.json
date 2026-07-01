@@ -1,6 +1,6 @@
 {
-  "model": {
-    "type": "minecraft:model",
-    "model": "carrotmod:item/carrot_empire_sword"
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "carrotmod:item/carrot_empire_sword"
   }
 }

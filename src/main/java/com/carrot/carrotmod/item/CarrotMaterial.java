@@ -19,7 +19,7 @@ public class CarrotMaterial {
             );
 
     public static final ToolMaterial INSTANCE = new ToolMaterial(
-            BlockTags.INCORRECT_FOR_WOODEN_TOOL, // 挖掘等级（钻石）
+            BlockTags.INCORRECT_FOR_DIAMOND_TOOL, // 挖掘等级（钻石）
             BASE_DURABILITY,                     // 1750
             8.5F,                                // 挖掘速度（钻石与下界合金折中）
             3.5F,                                // 攻击加成（折中）

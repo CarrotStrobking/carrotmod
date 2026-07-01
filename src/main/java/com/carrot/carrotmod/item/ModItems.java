@@ -16,7 +16,10 @@ public class ModItems {
 
     public static final Item CARROT_EMPIRE_SWORD = registerItem(
             "carrot_empire_sword",
-            properties -> new Item(
+            properties -> new CarrotSwordItem(
+                    CarrotMaterial.INSTANCE,
+                    5.0F,
+                    -2.4F,
                     properties.sword(CarrotMaterial.INSTANCE, 5.0F, -2.4F)
             )
     );
@@ -47,6 +50,7 @@ public class ModItems {
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.COMBAT)
                 .register(entries -> entries.accept(CARROT_EMPIRE_SWORD));
     }
+
 }
 
 
