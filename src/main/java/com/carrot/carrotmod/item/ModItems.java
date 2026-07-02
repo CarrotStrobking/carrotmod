@@ -16,13 +16,8 @@ public class ModItems {
 
     public static final Item CARROT_EMPIRE_SWORD = registerItem(
             "carrot_empire_sword",
-            properties -> new CarrotSwordItem(
-                    CarrotMaterial.INSTANCE,
-                    5.0F,
-                    -2.4F,
-                    properties.sword(CarrotMaterial.INSTANCE, 5.0F, -2.4F)
-            )
-    );
+            setting -> new Item(setting.sword(CarrotMaterial.INSTANCE,5.0F,
+            -2.4F)));
 
 
     private static Item registerItem(String name, Function<Item.Properties, Item> factory) {
@@ -45,7 +40,7 @@ public class ModItems {
 
     public static void registerMODItems() {
 
-        CarrotMod.LOGGER.info("Registering Mod Items for {}", CarrotMod.MOD_ID);
+        CarrotMod.LOGGER.info("Registering Mod Items for" + CarrotMod.MOD_ID);
 
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.COMBAT)
                 .register(entries -> entries.accept(CARROT_EMPIRE_SWORD));
