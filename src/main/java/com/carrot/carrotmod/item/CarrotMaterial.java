@@ -19,11 +19,11 @@ public class CarrotMaterial {
             );
 
     public static final ToolMaterial INSTANCE = new ToolMaterial(
-            BlockTags.INCORRECT_FOR_DIAMOND_TOOL, // 挖掘等级（钻石）
+            BlockTags.INCORRECT_FOR_DIAMOND_TOOL, // 挖掘等级
             BASE_DURABILITY,                     // 1750
-            8.5F,                                // 挖掘速度（钻石与下界合金折中）
-            3.5F,                                // 攻击加成（折中）
-            13,                                  // 附魔能力（折中）
+            8.5F,                                // 挖掘速度
+            2F,                                // 攻击加成
+            13,                                  // 附魔能力
             REPAIRS_CARROT_TOOL                  // 修复材料
     );
 }
