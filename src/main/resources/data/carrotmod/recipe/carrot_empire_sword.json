@@ -7,9 +7,9 @@
     "C": "#minecraft:iron_tool_materials"
   },
   "pattern": [
-    "AB ",
     "BAB",
-    " BC"
+    "BAB",
+    "BCB"
   ],
   "result": {
     "count": 1,
