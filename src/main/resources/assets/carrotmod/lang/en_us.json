@@ -3,6 +3,6 @@
   "message.carrotmod.holy_power_recovering": "Holy Power is recovering...",
   "message.carrotmod.holy_power_restored": "The Carrot Empire Sword has regained its Holy Power(oQVQ)o！",
   "message.carrotmod.holy_power_depleted": "The Carrot Empire Sword has exhausted its Holy Power(QAQ...)",
-  "message.carrotmod.holy_power_bar": "Holy Power %1$s §7(%2$s/%3$s)",
-  "message.carrotmod.holy_power_partial": "The Carrot Empire Sword has regained part of its Holy Power(~QWQ)~."
+  "message.carrotmod.holy_power_partial": "The Carrot Empire Sword has regained some of its power（~QWQ）~",
+  "message.carrotmod.holy_power_bar": "Holy Power %1$s §7(%2$s/%3$s)"
 }
