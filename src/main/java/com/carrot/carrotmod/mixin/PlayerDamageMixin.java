@@ -1,6 +1,6 @@
 package com.carrot.carrotmod.mixin;
 
-import com.carrot.carrotmod.event.HealingEvents;
+import com.carrot.carrotmod.ability.core.AbilityManager;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.damagesource.DamageSource;
@@ -22,14 +22,15 @@ public class PlayerDamageMixin {
                                         float amount,
                                         CallbackInfo ci) {
 
-        LivingEntity entity = (LivingEntity)(Object)this;
+        LivingEntity entity = (LivingEntity) (Object) this;
 
         if (!(entity instanceof ServerPlayer player))
             return;
 
-        // 记录玩家最后一次受到伤害
-        HealingEvents.onPlayerDamaged(
+        AbilityManager.damaged(
                 player,
+                source,
+                amount,
                 level.getServer().getTickCount()
         );
     }

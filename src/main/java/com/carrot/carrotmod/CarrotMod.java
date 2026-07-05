@@ -1,5 +1,9 @@
 package com.carrot.carrotmod;
-import com.carrot.carrotmod.event.HealingEvents;
+
+import com.carrot.carrotmod.ability.component.ModDataComponents;
+import com.carrot.carrotmod.ability.core.AbilityRegistry;
+import com.carrot.carrotmod.ability.weapon.carrot.CarrotSwordAbility;
+import com.carrot.carrotmod.event.core.ModEvents;
 import com.carrot.carrotmod.item.ModItems;
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.resources.ResourceLocation;
@@ -15,7 +19,11 @@ public class CarrotMod implements ModInitializer {
 
 		ModItems.registerMODItems();
 
-		HealingEvents.register();
+		// 注册能力系统
+		AbilityRegistry.register(ModItems.CARROT_EMPIRE_SWORD, new CarrotSwordAbility());
+		ModEvents.register();
+		ModDataComponents.register();
+		ModEvents.register();
 	}
 
 	public static ResourceLocation id(String path) {
