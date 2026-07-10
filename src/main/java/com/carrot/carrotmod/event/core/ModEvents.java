@@ -20,5 +20,6 @@ public class ModEvents {
         });
 
         PlayerUseItemEvent.register();
+
     }
 }

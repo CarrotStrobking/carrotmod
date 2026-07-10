@@ -8,30 +8,30 @@ import net.minecraft.world.entity.LivingEntity;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
-import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
-@Mixin(LivingEntity.class)
-public class PlayerDamageMixin {
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
-    @Inject(
-            method = "actuallyHurt",
-            at = @At("TAIL")
-    )
-    private void carrotmod$actuallyHurt(ServerLevel level,
-                                        DamageSource source,
-                                        float amount,
-                                        CallbackInfo ci) {
 
-        LivingEntity entity = (LivingEntity) (Object) this;
+@Mixin(ServerPlayer.class)
+public abstract class PlayerDamageMixin {
 
-        if (!(entity instanceof ServerPlayer player))
+    @Inject(method = "hurtServer", at = @At("TAIL"))
+    private void carrotmod$hurtServer(ServerLevel serverLevel,
+                                      DamageSource damageSource,
+                                      float amount,
+                                      CallbackInfoReturnable<Boolean> cir) {
+
+        LivingEntity entity = (LivingEntity)(Object)this;
+
+        if (!(entity instanceof ServerPlayer player)) {
             return;
+        }
 
         AbilityManager.damaged(
                 player,
-                source,
+                damageSource,
                 amount,
-                level.getServer().getTickCount()
+                player.level().getGameTime()
         );
     }
 }

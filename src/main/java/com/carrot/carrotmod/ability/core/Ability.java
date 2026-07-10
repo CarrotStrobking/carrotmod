@@ -18,4 +18,20 @@ public interface Ability {
                          DamageSource source,
                          float amount,
                          long tick) {}
+
+    default float modifyDamageTaken(ServerPlayer player,
+                                    ItemStack stack,
+                                    DamageSource source,
+                                    float damage,
+                                    long tick) {
+        return damage;
+    }
+
+    default void death(ServerPlayer player,
+                       ItemStack stack) {
+    }
+
+    default void cancelChannel(ServerPlayer player,
+                               ItemStack stack) {
+    }
 }

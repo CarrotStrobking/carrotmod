@@ -16,8 +16,13 @@ public class ModItems {
 
     public static final Item CARROT_EMPIRE_SWORD = registerItem(
             "carrot_empire_sword",
-            setting -> new Item(setting.sword(CarrotMaterial.INSTANCE,4.0F,
-            -2.4F)));
+            setting -> new CarrotSwordItem(
+                    CarrotMaterial.INSTANCE,
+                    4.0F,
+                    -2.4F,
+                    setting
+            )
+    );
 
 
     private static Item registerItem(String name, Function<Item.Properties, Item> factory) {

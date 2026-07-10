@@ -1,4 +1,5 @@
 package com.carrot.carrotmod.event.player;
 
-public class PlayerDamageEvent {
+public final class PlayerDamageEvent {
+
 }

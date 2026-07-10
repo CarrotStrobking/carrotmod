@@ -40,5 +40,43 @@ public final class AbilityMessages {
                 true
         );
     }
+
+    public static void shieldActivated(ServerPlayer player) {
+        player.displayClientMessage(
+                Component.translatable("message.carrotmod.shield_activated"),
+                false
+        );
+    }
+
+    public static void shieldCharging(ServerPlayer player, int percent) {
+        player.displayClientMessage(
+                Component.translatable(
+                        "message.carrotmod.shield_charging",
+                        percent
+                ),
+                true
+        );
+    }
+
+    public static void shieldLost(ServerPlayer player) {
+
+        player.displayClientMessage(
+                Component.translatable(
+                        "message.carrotmod.shield_lost"
+                ),
+                false
+        );
+
+    }
+    public static void shieldInterrupted(ServerPlayer player){
+
+        player.displayClientMessage(
+                Component.translatable(
+                        "message.carrotmod.shield_interrupted"
+                ),
+                false
+        );
+
+    }
 }
 

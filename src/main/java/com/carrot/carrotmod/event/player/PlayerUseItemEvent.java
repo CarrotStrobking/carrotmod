@@ -7,8 +7,6 @@ import net.minecraft.world.InteractionResult;
 
 public final class PlayerUseItemEvent {
 
-    private PlayerUseItemEvent() {}
-
     public static void register() {
 
         UseItemCallback.EVENT.register((player, world, hand) -> {

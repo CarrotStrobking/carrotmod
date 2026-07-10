@@ -91,6 +91,18 @@ public final class ModDataComponents {
                             .build()
             );
 
+    public static final DataComponentType<Boolean> CHANNEL_INTERRUPTED =
+            Registry.register(
+                    BuiltInRegistries.DATA_COMPONENT_TYPE,
+                    CarrotMod.id("channel_interrupted"),
+                    DataComponentType.<Boolean>builder()
+                            .persistent(Codec.BOOL)
+                            .build()
+            );
+
+
+
+
     public static void register() {
     }
 }

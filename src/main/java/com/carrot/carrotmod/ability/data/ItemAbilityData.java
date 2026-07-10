@@ -1,6 +1,7 @@
 package com.carrot.carrotmod.ability.data;
 
 import com.carrot.carrotmod.ability.component.ModDataComponents;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.item.ItemStack;
 
 public final class ItemAbilityData {
@@ -8,6 +9,7 @@ public final class ItemAbilityData {
     private ItemAbilityData() {
     }
 
+    //Holy Power
     public static int getHolyPower(ItemStack stack) {
         return stack.getOrDefault(ModDataComponents.HOLY_POWER, 5);
     }
@@ -55,6 +57,7 @@ public final class ItemAbilityData {
         stack.set(ModDataComponents.WAS_FULL, value);
     }
 
+    //蓄力
     //CHANNEL_START_TICK
     public static long getChannelStartTick(ItemStack stack) {
         return stack.getOrDefault(ModDataComponents.CHANNEL_START_TICK, 0L);
@@ -83,9 +86,17 @@ public final class ItemAbilityData {
     }
 
     //状态判断~
-    public static boolean isChanneling(ItemStack stack, long tick) {
-        return getChannelStartTick(stack) > 0;
+    public static boolean isChanneling(ItemStack stack, ServerPlayer player) {
+        long start = getChannelStartTick(stack);
+        if (start == 0) return false;
+
+        if (!player.isUsingItem()) return false;
+
+        if (player.getUseItem() != stack) return false;
+
+        return true;
     }
+
 
     public static boolean hasShield(ItemStack stack, long tick) {
         return tick < getShieldEndTick(stack);
@@ -94,4 +105,14 @@ public final class ItemAbilityData {
     public static boolean isShieldCooling(ItemStack stack, long tick) {
         return tick < getShieldCooldownEndTick(stack);
     }
+
+    //防止打断提示被反复触发
+    public static boolean isChannelInterrupted(ItemStack stack) {
+        return stack.getOrDefault(ModDataComponents.CHANNEL_INTERRUPTED, false);
+    }
+
+    public static void setChannelInterrupted(ItemStack stack, boolean value) {
+        stack.set(ModDataComponents.CHANNEL_INTERRUPTED, value);
+    }
+
 }
