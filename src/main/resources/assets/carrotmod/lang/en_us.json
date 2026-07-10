@@ -7,5 +7,6 @@
   "message.carrotmod.shield_activated": "§bHoly Shield Activated(oOMOo)!",
   "message.carrotmod.shield_charging": "Forming Holy Shield... %s%%",
   "message.carrotmod.shield_lost": "Holy Shield has faded away as the Carrot Holy Sword was released...",
-  "message.carrotmod.shield_interrupted": "Holy Shield channeling has been interrupted<(OAO)>!"
+  "message.carrotmod.shield_interrupted": "Holy Shield channeling has been interrupted<(OAO)>!",
+  "message.carrotmod.shield_cooling": "Holy Shield is still cooling down(Zzz...)"
 }

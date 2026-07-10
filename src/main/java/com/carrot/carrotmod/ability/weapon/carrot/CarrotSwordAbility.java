@@ -203,6 +203,7 @@ public class CarrotSwordAbility implements Ability {
         if (power == MAX_POWER && !ItemAbilityData.wasFull(stack)) {
 
             AbilityMessages.holyPowerRestored(player);
+
             ItemAbilityData.setWasFull(stack, true);
         }
     }
@@ -242,6 +243,14 @@ public class CarrotSwordAbility implements Ability {
         }
 
         if (ItemAbilityData.isShieldCooling(stack, tick)) {
+
+            long lastMessage = ItemAbilityData.getLastCooldownMessageTick(stack);
+
+            if (tick - lastMessage >= 20) {
+                AbilityMessages.shieldCooling(player);
+                ItemAbilityData.setLastCooldownMessageTick(stack, tick);
+            }
+
             return;
         }
 

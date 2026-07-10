@@ -115,4 +115,18 @@ public final class ItemAbilityData {
         stack.set(ModDataComponents.CHANNEL_INTERRUPTED, value);
     }
 
+    //防止冷却提示反复触发
+    public static long getLastCooldownMessageTick(ItemStack stack) {
+        return stack.getOrDefault(
+                ModDataComponents.LAST_COOLDOWN_MESSAGE_TICK,
+                0L
+        );
+    }
+
+    public static void setLastCooldownMessageTick(ItemStack stack, long tick) {
+        stack.set(
+                ModDataComponents.LAST_COOLDOWN_MESSAGE_TICK,
+                tick
+        );
+    }
 }

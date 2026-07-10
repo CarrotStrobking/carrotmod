@@ -78,5 +78,15 @@ public final class AbilityMessages {
         );
 
     }
+
+    public static void shieldCooling(ServerPlayer player) {
+
+        player.sendSystemMessage(
+                Component.translatable(
+                        "message.carrotmod.shield_cooling"
+                ),
+                false
+        );
+    }
 }
 

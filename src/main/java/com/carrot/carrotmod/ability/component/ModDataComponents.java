@@ -100,8 +100,14 @@ public final class ModDataComponents {
                             .build()
             );
 
-
-
+    public static final DataComponentType<Long> LAST_COOLDOWN_MESSAGE_TICK =
+            Registry.register(
+                    BuiltInRegistries.DATA_COMPONENT_TYPE,
+                    CarrotMod.id("last_cooldown_message_tick"),
+                    DataComponentType.<Long>builder()
+                            .persistent(Codec.LONG)
+                            .build()
+            );
 
     public static void register() {
     }

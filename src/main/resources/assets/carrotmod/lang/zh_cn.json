@@ -7,5 +7,6 @@
   "message.carrotmod.shield_activated": "§b神圣护盾已激活(oOMOo)！",
   "message.carrotmod.shield_charging": "护盾凝聚中…… %s%%",
   "message.carrotmod.shield_lost": "神圣护盾因胡萝北圣剑的离开而消散...",
-  "message.carrotmod.shield_interrupted": "凝聚被打断了<(OAO)>！"
+  "message.carrotmod.shield_interrupted": "凝聚被打断了<(OAO)>！",
+  "message.carrotmod.shield_cooling": "护盾还在冷却中(Zzz...)"
 }
